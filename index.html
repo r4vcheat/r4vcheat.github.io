@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang='ja'>
+    <meta charset="utf-8"/>
+    <head>
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>FF14 DMU P4</title>
+        <link href="css/ress.css" rel="stylesheet" type="text/css">
+        <link href="css/css.css?v=20210111" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="js/js.js?v=20210111"></script>
+    </head>
+    <body>
+        <headder>
+            ヘッダーだよ
+        </headder>
+
+        <div id="mainContents">
+            <div id="taskList">
+            </div>
+        </div>
+
+        <footer>
+            フッターだよ
+        </footer>
+        
+        <div id="main">
+            <table id="grandCrossFirst" class="grandCross">
+                <tr class="grandCrossHead">
+                    <th class="grandCrossNum">
+                        1回目
+                    </th>
+                    <th class="grandCrossTFButton">
+                        <input type="button" id="1-true" value="真">
+                    </th>
+                    <th class="grandCrossTFButton">
+                            <input type="button" id="1-false" value="偽">
+                    </th>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="1_water" value="水">
+                    </td>
+                    <td id="1_water_true" class="grandCrossEffect disabled">
+                        頭割
+                    </td>
+                    <td id="1_water_false" class="grandCrossEffect disabled">
+                        散開
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="1_lightning" value="雷">
+                    </td>
+                    <td id="1_lightning_true" class="grandCrossEffect disabled">
+                        散開
+                    </td>
+                    <td id="1_lightning_false" class="grandCrossEffect disabled">
+                        頭割
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="1_sight" value="視線">
+                    </td>
+                    <td id="1_sight_true" class="grandCrossEffect disabled">
+                        早見ない
+                    </td>
+                    <td id="1_sight_false" class="grandCrossEffect disabled">
+                        早見る
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="1_bomb" value="加速度">
+                    </td>
+                    <td id="1_bomb_true" class="grandCrossEffect disabled">
+                        止まる
+                    </td>
+                    <td id="1_bomb_false" class="grandCrossEffect disabled">
+                        動く
+                    </td>
+                </tr>
+            </table>
+            <table id="grandCrossSecond" class="grandCross">
+                <tr class="grandCrossHead">
+                    <th class="grandCrossNum">
+                        2回目
+                    </th>
+                    <th class="grandCrossTFButton">
+                        <input type="button" id="2-true" value="真">
+                    </th>
+                    <th class="grandCrossTFButton">
+                        <input type="button" id="2-false" value="偽">
+                    </th>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="2_water" value="水">
+                    </td>
+                    <td id="2_water_true" class="grandCrossEffect disabled">
+                        頭割
+                    </td>
+                    <td id="2_water_false" class="grandCrossEffect disabled">
+                        散開
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="2_lightning" value="雷">
+                    </td>
+                    <td id="2_lightning_true" class="grandCrossEffect disabled">
+                        散開
+                    </td>
+                    <td id="2_lightning_false" class="grandCrossEffect disabled">
+                        頭割
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="2_sight" value="視線">
+                    </td>
+                    <td id="2_sight_true" class="grandCrossEffect disabled">
+                        早見ない
+                    </td>
+                    <td id="2_sight_false" class="grandCrossEffect disabled">
+                        早見る
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="2_bomb" value="加速度">
+                    </td>
+                    <td id="2_bomb_true" class="grandCrossEffect disabled">
+                        止まる
+                    </td>
+                    <td id="2_bomb_false" class="grandCrossEffect disabled">
+                        動く
+                    </td>
+                </tr>
+            </table>
+
+            <table id="grandCrossSecond" class="grandCross">
+                <tr class="grandCrossHead">
+                    <th class="grandCrossNum">
+                    </th>
+                    <th class="grandCrossTFButton">
+                        <input type="button" id="tsunami-true-button" value="真">
+                    </th>
+                    <th class="grandCrossTFButton">
+                        <input type="button" id="tsunami-false-button" value="偽">
+                    </th>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="tsunami" value="つなみ">
+                    </td>
+                    <td id="tsunami_true" class="grandCrossEffect disabled">
+                        ドーナツ
+                    </td>
+                    <td id="tsunami_false" class="grandCrossEffect disabled">
+                        円範囲
+                    </td>
+                </tr>
+            </table>
+            <table id="grandCrossSecond" class="grandCross">
+                <tr class="grandCrossHead">
+                    <th class="grandCrossNum">
+                    </th>
+                    <th class="grandCrossTFButton">
+                        <input type="button" id="fire-true-button" value="真">
+                    </th>
+                    <th class="grandCrossTFButton">
+                        <input type="button" id="fire-false-button" value="偽">
+                    </th>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <input type="button" id="fire" value="ほのお">
+                    </td>
+                    <td id="fire_true" class="grandCrossEffect disabled">
+                        円範囲
+                    </td>
+                    <td id="fire_false" class="grandCrossEffect disabled">
+                        ドーナツ
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
