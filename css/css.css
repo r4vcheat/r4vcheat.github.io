@@ -184,6 +184,10 @@ body{
     background-color: blanchedalmond;
 }
 
+.grandCrossTFButton.active{
+    background-color: cornflowerblue;
+}
+
 td{
     width: 120px;
     padding: 5px;

@@ -7,18 +7,26 @@ $(function(){
     // 真偽ボタン
     $("#1-true").on("pointerdown", function(){
         flag1 = true;
+        $("#1-true").addClass("active");
+        $("#1-false").removeClass("active");
         effectCalc();
     });
     $("#1-false").on("pointerdown", function(){
         flag1 = false;
+        $("#1-true").removeClass("active");
+        $("#1-false").addClass("active");
         effectCalc();
     });
     $("#2-true").on("pointerdown", function(){
         flag2 = true;
+        $("#2-true").addClass("active");
+        $("#2-false").removeClass("active");
         effectCalc();
     });
     $("#2-false").on("pointerdown", function(){
         flag2 = false;
+        $("#2-true").removeClass("active");
+        $("#2-false").addClass("active");
         effectCalc();
     });
 
@@ -69,18 +77,26 @@ $(function(){
     
     $("#tsunami-true-button").on("pointerdown", function(){
         flagTsunami = true;
+        $("#tsunami-true-button").addClass("active");
+        $("#tsunami-false-button").removeClass("active");
         effectCalc();
     });
     $("#tsunami-false-button").on("pointerdown", function(){
         flagTsunami = false;
+        $("#tsunami-true-button").removeClass("active");
+        $("#tsunami-false-button").addClass("active");
         effectCalc();
     });
     $("#fire-true-button").on("pointerdown", function(){
         flagFire = true;
+        $("#fire-true-button").addClass("active");
+        $("#fire-false-button").removeClass("active");
         effectCalc();
     });
     $("#fire-false-button").on("pointerdown", function(){
         flagFire = false;
+        $("#fire-true-button").removeClass("active");
+        $("#fire-false-button").addClass("active");
         effectCalc();
     });
 
