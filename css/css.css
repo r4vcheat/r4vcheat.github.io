@@ -152,6 +152,13 @@ input[type="number"] {
     -moz-appearance:textfield; 
 } 
 
+body{
+    text-align: center;
+}
+
+#main{
+    display: inline-block;
+}
 
 .button{
     display: inline-block;
@@ -164,6 +171,10 @@ input[type="number"] {
     cursor: pointer;
 }
 
+.grandCross{
+    text-align: center;
+    margin-top: 10px;
+}
 .grandCrossEffect.disabled{
     color: gray;
     background-color: gray;
@@ -171,4 +182,14 @@ input[type="number"] {
 
 .grandCrossEffect{
     background-color: blanchedalmond;
+}
+
+td{
+    width: 120px;
+    padding: 5px;
+}
+
+.debuffImg{
+    width: 30px;
+    height: 30px;
 }
