@@ -36,18 +36,26 @@ $(function(){
 
     $("#1_water").on("pointerdown", function(){
         flag1wl = "w";
+        $("#1_water").addClass("active");
+        $("#1_lightning").removeClass("active");
         effectCalc();
     });
     $("#1_lightning").on("pointerdown", function(){
         flag1wl = "l";
+        $("#1_water").removeClass("active");
+        $("#1_lightning").addClass("active");
         effectCalc();
     });
     $("#2_water").on("pointerdown", function(){
         flag2wl = "w";
+        $("#2_water").addClass("active");
+        $("#2_lightning").removeClass("active");
         effectCalc();
     });
     $("#2_lightning").on("pointerdown", function(){
         flag2wl = "l";
+        $("#2_water").removeClass("active");
+        $("#2_lightning").addClass("active");
         effectCalc();
     });
 
@@ -57,16 +65,20 @@ $(function(){
     $("#1_bomb").on("pointerdown", function(){
         if(flag1b){
             flag1b = null;
+            $("#1_bomb").removeClass("active");
         }else{ // 加速度2度押し解除
             flag1b = true;
+            $("#1_bomb").addClass("active");
         }
         effectCalc();
     });
     $("#2_bomb").on("pointerdown", function(){
         if(flag2b){
             flag2b = null;
+            $("#2_bomb").removeClass("active");
         }else{ // 加速度2度押し解除
             flag2b = true;
+            $("#2_bomb").addClass("active");
         }
         effectCalc();
     });
