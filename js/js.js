@@ -35,7 +35,7 @@ $(function(){
     flag2wl = null;
 
     $("#1_water").on("pointerdown", function(){
-        if(flag1wl !== null){
+        if(flag1wl === "w"){
             flag1wl = null;
             $("#1_water").removeClass("active");
             $("#1_lightning").removeClass("active");
@@ -47,7 +47,7 @@ $(function(){
         effectCalc();
     });
     $("#1_lightning").on("pointerdown", function(){
-        if(flag1wl !== null){
+        if(flag1wl === "l"){
             flag1wl = null;
             $("#1_water").removeClass("active");
             $("#1_lightning").removeClass("active");
@@ -59,7 +59,7 @@ $(function(){
         effectCalc();
     });
     $("#2_water").on("pointerdown", function(){
-        if(flag2wl !== null){
+        if(flag2wl === "w"){
             flag2wl = null;
             $("#2_water").removeClass("active");
             $("#2_lightning").removeClass("active");
@@ -71,7 +71,7 @@ $(function(){
         effectCalc();
     });
     $("#2_lightning").on("pointerdown", function(){
-        if(flag2wl !== null){
+        if(flag2wl === "l"){
             flag2wl = null;
             $("#2_water").removeClass("active");
             $("#2_lightning").removeClass("active");
