@@ -175,13 +175,21 @@ body{
     text-align: center;
     margin-top: 10px;
 }
-.grandCrossEffect.disabled{
-    color: gray;
+.grandCrossEffect.special.disabled, .grandCrossEffect.sight.disabled{
+    color: gray ;
     background-color: gray;
 }
 
 .grandCrossEffect{
     background-color: blanchedalmond;
+}
+
+.grandCrossEffect.special{
+    font-weight: bold;
+}
+
+.grandCrossEffect.sight{
+    background-color: pink;
 }
 
 .active{
