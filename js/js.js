@@ -35,27 +35,51 @@ $(function(){
     flag2wl = null;
 
     $("#1_water").on("pointerdown", function(){
-        flag1wl = "w";
-        $("#1_water").addClass("active");
-        $("#1_lightning").removeClass("active");
+        if(flag1wl !== null){
+            flag1wl = null;
+            $("#1_water").removeClass("active");
+            $("#1_lightning").removeClass("active");
+        }else{
+            flag1wl = "w";
+            $("#1_water").addClass("active");
+            $("#1_lightning").removeClass("active");
+        }
         effectCalc();
     });
     $("#1_lightning").on("pointerdown", function(){
-        flag1wl = "l";
-        $("#1_water").removeClass("active");
-        $("#1_lightning").addClass("active");
+        if(flag1wl !== null){
+            flag1wl = null;
+            $("#1_water").removeClass("active");
+            $("#1_lightning").removeClass("active");
+        }else{
+            flag1wl = "l";
+            $("#1_water").removeClass("active");
+            $("#1_lightning").addClass("active");
+        }
         effectCalc();
     });
     $("#2_water").on("pointerdown", function(){
-        flag2wl = "w";
-        $("#2_water").addClass("active");
-        $("#2_lightning").removeClass("active");
+        if(flag2wl !== null){
+            flag2wl = null;
+            $("#2_water").removeClass("active");
+            $("#2_lightning").removeClass("active");
+        }else{
+            flag2wl = "w";
+            $("#2_water").addClass("active");
+            $("#2_lightning").removeClass("active");
+        }
         effectCalc();
     });
     $("#2_lightning").on("pointerdown", function(){
-        flag2wl = "l";
-        $("#2_water").removeClass("active");
-        $("#2_lightning").addClass("active");
+        if(flag2wl !== null){
+            flag2wl = null;
+            $("#2_water").removeClass("active");
+            $("#2_lightning").removeClass("active");
+        }else{
+            flag2wl = "l";
+            $("#2_water").removeClass("active");
+            $("#2_lightning").addClass("active");
+        }
         effectCalc();
     });
 
@@ -89,16 +113,20 @@ $(function(){
     $("#1_sight").on("pointerdown", function(){
         if(flag1s){
             flag1s = null;
+            $("#1_sight").removeClass("active");
         }else{ // 視線2度押し解除
             flag1s = true;
+            $("#1_sight").addClass("active");
         }
         effectCalc();
     });
     $("#2_sight").on("pointerdown", function(){
         if(flag2s){
             flag2s = null;
+            $("#2_sight").removeClass("active");
         }else{ // 視線2度押し解除
             flag2s = true;
+            $("#2_sight").addClass("active");
         }
         effectCalc();
     });
@@ -150,6 +178,11 @@ $(function(){
                     $("#1_water_false").addClass("disabled");
                     $("#1_lightning_true").removeClass("disabled");
                     $("#1_lightning_false").addClass("disabled");
+                }else{
+                    $("#1_water_true").addClass("disabled");
+                    $("#1_water_false").addClass("disabled");
+                    $("#1_lightning_true").addClass("disabled");
+                    $("#1_lightning_false").addClass("disabled");
                 }
                 if(flag1b === true){ // 真・加速度の場合
                     $("#1_bomb_true").removeClass("disabled");
@@ -171,6 +204,11 @@ $(function(){
                     $("#1_water_false").addClass("disabled");
                     $("#1_lightning_true").addClass("disabled");
                     $("#1_lightning_false").removeClass("disabled");
+                }else{
+                    $("#1_water_true").addClass("disabled");
+                    $("#1_water_false").addClass("disabled");
+                    $("#1_lightning_true").addClass("disabled");
+                    $("#1_lightning_false").addClass("disabled");
                 }
                 if(flag1b === true){ // 偽・加速度の場合
                     $("#1_bomb_true").addClass("disabled");
@@ -198,6 +236,11 @@ $(function(){
                     $("#2_water_false").addClass("disabled");
                     $("#2_lightning_true").removeClass("disabled");
                     $("#2_lightning_false").addClass("disabled");
+                }else{
+                    $("#2_water_true").addClass("disabled");
+                    $("#2_water_false").addClass("disabled");
+                    $("#2_lightning_true").addClass("disabled");
+                    $("#2_lightning_false").addClass("disabled");
                 }
                 if(flag2b === true){ // 真・加速度の場合
                     $("#2_bomb_true").removeClass("disabled");
@@ -219,6 +262,11 @@ $(function(){
                     $("#2_water_false").addClass("disabled");
                     $("#2_lightning_true").addClass("disabled");
                     $("#2_lightning_false").removeClass("disabled");
+                }else{
+                    $("#2_water_true").addClass("disabled");
+                    $("#2_water_false").addClass("disabled");
+                    $("#2_lightning_true").addClass("disabled");
+                    $("#2_lightning_false").addClass("disabled");
                 }
                 if(flag2b === true){ // 偽・加速度の場合
                     $("#2_bomb_true").addClass("disabled");
