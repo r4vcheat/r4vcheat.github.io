@@ -192,6 +192,10 @@ body{
     background-color: pink;
 }
 
+.grandCrossEffect.sight.bold{
+    font-weight: bold;
+}
+
 .active{
     background-color: cornflowerblue;
 }

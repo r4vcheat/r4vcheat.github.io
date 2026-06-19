@@ -82,6 +82,26 @@ $(function(){
         }
         effectCalc();
     });
+    
+    // 視線ボタンを押したときのフラグ s=sight
+    flag1s = null;
+    flag2s = null;
+    $("#1_sight").on("pointerdown", function(){
+        if(flag1s){
+            flag1s = null;
+        }else{ // 視線2度押し解除
+            flag1s = true;
+        }
+        effectCalc();
+    });
+    $("#2_sight").on("pointerdown", function(){
+        if(flag2s){
+            flag2s = null;
+        }else{ // 視線2度押し解除
+            flag2s = true;
+        }
+        effectCalc();
+    });
 
     // つなみ・ほのおの真偽ボタンを押した時のフラグ
     flagTsunami = null;
@@ -228,6 +248,21 @@ $(function(){
                 $("#fire_true").addClass("disabled");
                 $("#fire_false").removeClass("disabled");
             }
+        }
+        
+        if(flag1s){
+            $("#1_sight_true").addClass("bold");
+            $("#1_sight_false").addClass("bold");
+        }else if(!flag1s){
+            $("#1_sight_true").removeClass("bold");
+            $("#1_sight_false").removeClass("bold");                
+        }
+        if(flag2s){
+            $("#2_sight_true").addClass("bold");
+            $("#2_sight_false").addClass("bold");
+        }else if(!flag2s){
+            $("#2_sight_true").removeClass("bold");
+            $("#2_sight_false").removeClass("bold");                
         }
     }
 
