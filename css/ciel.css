@@ -206,7 +206,7 @@ body{
 
 td{
     width: 120px;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .debuffImg{
