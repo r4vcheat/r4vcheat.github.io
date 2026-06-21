@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang='ja'>
+    <meta charset="utf-8"/>
+    <head>
+        <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>FF14 DMU P4</title>
+        <link href="css/ress.css" rel="stylesheet" type="text/css">
+        <link href="css/ciel.css?v=20210111" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="js/js.js?v=20210111"></script>
+    </head>
+    <body>
+        
+        <div id="main">
+            <table id="grandCrossFirst" class="grandCross">
+                <tr class="grandCrossHead">
+                    <th class="grandCrossNum">
+                        1回目
+                    </th>
+                    <th class="grandCrossTFButton" id="1-true">
+                        <input type="button" value="真">
+                    </th>
+                    <th class="grandCrossTFButton" id="1-false">
+                        <input type="button" value="偽">
+                    </th>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff" id="1_water">
+                        <img class="debuffImg" src="img/water.jpg">
+                        水
+                    </td>
+                    <td id="1_water_true" class="grandCrossEffect special disabled">
+                        頭割
+                    </td>
+                    <td id="1_water_false" class="grandCrossEffect special disabled">
+                        散開
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff" id="1_lightning">
+                        <img class="debuffImg" src="img/lightning.jpg">
+                        雷
+                    </td>
+                    <td id="1_lightning_true" class="grandCrossEffect special disabled">
+                        散開
+                    </td>
+                    <td id="1_lightning_false" class="grandCrossEffect special disabled">
+                        頭割
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff" id="1_sight">
+                        <img class="debuffImg" src="img/sight.jpg">
+                        視線
+                    </td>
+                    <td id="1_sight_true" class="grandCrossEffect sight disabled">
+                        早見ない
+                    </td>
+                    <td id="1_sight_false" class="grandCrossEffect sight disabled">
+                        早見る
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff" id="1_bomb">
+                        <img class="debuffImg" src="img/bomb.jpg">
+                        加速度
+                    </td>
+                    <td id="1_bomb_true" class="grandCrossEffect special disabled">
+                        止まる
+                    </td>
+                    <td id="1_bomb_false" class="grandCrossEffect special disabled">
+                        動く
+                    </td>
+                </tr>
+            </table>
+            <table id="grandCrossSecond" class="grandCross">
+                <tr class="grandCrossHead">
+                    <th class="grandCrossNum">
+                        2回目
+                    </th>
+                    <th class="grandCrossTFButton" id="2-true">
+                        <input type="button" value="真">
+                    </th>
+                    <th class="grandCrossTFButton" id="2-false">
+                        <input type="button" value="偽">
+                    </th>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff" id="2_water">
+                        <img class="debuffImg" src="img/water.jpg">
+                        水
+                    </td>
+                    <td id="2_water_true" class="grandCrossEffect special disabled">
+                        頭割
+                    </td>
+                    <td id="2_water_false" class="grandCrossEffect special disabled">
+                        散開
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff" id="2_lightning">
+                        <img class="debuffImg" src="img/lightning.jpg">
+                        雷
+                    </td>
+                    <td id="2_lightning_true" class="grandCrossEffect special disabled">
+                        散開
+                    </td>
+                    <td id="2_lightning_false" class="grandCrossEffect special disabled">
+                        頭割
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff" id="2_sight">
+                        <img class="debuffImg" src="img/sight.jpg">
+                        視線
+                    </td>
+                    <td id="2_sight_true" class="grandCrossEffect sight disabled">
+                        遅見ない
+                    </td>
+                    <td id="2_sight_false" class="grandCrossEffect sight disabled">
+                        遅見る
+                    </td>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff" id="2_bomb">
+                        <img class="debuffImg" src="img/bomb.jpg">
+                        加速度
+                    </td>
+                    <td id="2_bomb_true" class="grandCrossEffect special disabled">
+                        止まる
+                    </td>
+                    <td id="2_bomb_false" class="grandCrossEffect special disabled">
+                        動く
+                    </td>
+                </tr>
+            </table>
+
+            <table id="grandCrossSecond" class="grandCross">
+                <tr class="grandCrossHead">
+                    <th class="grandCrossNum">
+                    </th>
+                    <th class="grandCrossTFButton" id="fire-true-button">
+                        <input type="button" value="真">
+                    </th>
+                    <th class="grandCrossTFButton" id="fire-false-button">
+                        <input type="button" value="偽">
+                    </th>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <img class="debuffImg" src="img/fire.jpg">
+                        ほのお
+                    </td>
+                    <td id="fire_true" class="grandCrossEffect special disabled">
+                        離れる
+                    </td>
+                    <td id="fire_false" class="grandCrossEffect special disabled">
+                        そのまま
+                    </td>
+                </tr>
+            </table>
+            
+            <table id="grandCrossSecond" class="grandCross">
+                <tr class="grandCrossHead">
+                    <th class="grandCrossNum">
+                    </th>
+                    <th class="grandCrossTFButton" id="tsunami-true-button">
+                        <input type="button" value="真">
+                    </th>
+                    <th class="grandCrossTFButton" id="tsunami-false-button">
+                        <input type="button" value="偽">
+                    </th>
+                </tr>
+                <tr class="grandCrossObj">
+                    <td class="grandCrossDebuff">
+                        <img class="debuffImg" src="img/tsunami.jpg">
+                        つなみ
+                    </td>
+                    <td id="tsunami_true" class="grandCrossEffect special disabled">
+                        そのまま
+                    </td>
+                    <td id="tsunami_false" class="grandCrossEffect special disabled">
+                        離れる
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html> 
