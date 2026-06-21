@@ -35,76 +35,108 @@ $(function(){
     flag2wl = null;
 
     $("#1_water").on("pointerdown", function(){
-        if(flag1wl === "w"){
-            flag1wl = null;
-            $("#1_water").removeClass("active");
-            $("#1_lightning").removeClass("active");
-        }else{
-            flag1wl = "w";
-            $("#1_water").addClass("active");
-            $("#1_lightning").removeClass("active");
+        if(flag2wl === null){
+            if(flag1wl === "w"){
+                flag1wl = null;
+                $("#1_water").removeClass("active");
+                $("#1_lightning").removeClass("active");
+                $("#2_water").removeClass("inactive");
+                $("#2_lightning").removeClass("inactive");
+            }else{
+                flag1wl = "w";
+                $("#1_water").addClass("active");
+                $("#1_lightning").removeClass("active");
+                $("#2_water").addClass("inactive");
+                $("#2_lightning").addClass("inactive");
+            }
+            effectCalc();
         }
-        effectCalc();
     });
     $("#1_lightning").on("pointerdown", function(){
-        if(flag1wl === "l"){
-            flag1wl = null;
-            $("#1_water").removeClass("active");
-            $("#1_lightning").removeClass("active");
-        }else{
-            flag1wl = "l";
-            $("#1_water").removeClass("active");
-            $("#1_lightning").addClass("active");
+        if(flag2wl === null){
+            if(flag1wl === "l"){
+                flag1wl = null;
+                $("#1_water").removeClass("active");
+                $("#1_lightning").removeClass("active");
+                $("#2_water").removeClass("inactive");
+                $("#2_lightning").removeClass("inactive");
+            }else{
+                flag1wl = "l";
+                $("#1_water").removeClass("active");
+                $("#1_lightning").addClass("active");
+                $("#2_water").addClass("inactive");
+                $("#2_lightning").addClass("inactive");
+            }
+            effectCalc();
         }
-        effectCalc();
     });
     $("#2_water").on("pointerdown", function(){
-        if(flag2wl === "w"){
-            flag2wl = null;
-            $("#2_water").removeClass("active");
-            $("#2_lightning").removeClass("active");
-        }else{
-            flag2wl = "w";
-            $("#2_water").addClass("active");
-            $("#2_lightning").removeClass("active");
+        if(flag1wl === null){
+            if(flag2wl === "w"){
+                flag2wl = null;
+                $("#1_water").removeClass("inactive");
+                $("#1_lightning").removeClass("inactive");
+                $("#2_water").removeClass("active");
+                $("#2_lightning").removeClass("active");
+            }else{
+                flag2wl = "w";
+                $("#1_water").addClass("inactive");
+                $("#1_lightning").addClass("inactive");
+                $("#2_water").addClass("active");
+                $("#2_lightning").removeClass("active");
+            }
+            effectCalc();
         }
-        effectCalc();
     });
     $("#2_lightning").on("pointerdown", function(){
-        if(flag2wl === "l"){
-            flag2wl = null;
-            $("#2_water").removeClass("active");
-            $("#2_lightning").removeClass("active");
-        }else{
-            flag2wl = "l";
-            $("#2_water").removeClass("active");
-            $("#2_lightning").addClass("active");
+        if(flag1wl === null){
+            if(flag2wl === "l"){
+                flag2wl = null;
+                $("#1_water").removeClass("inactive");
+                $("#1_lightning").removeClass("inactive");
+                $("#2_water").removeClass("active");
+                $("#2_lightning").removeClass("active");
+            }else{
+                flag2wl = "l";
+                $("#1_water").addClass("inactive");
+                $("#1_lightning").addClass("inactive");
+                $("#2_water").removeClass("active");
+                $("#2_lightning").addClass("active");
+            }
+            effectCalc();
         }
-        effectCalc();
     });
 
     // 加速度ボタンを押したときのフラグ b=bomb
     flag1b = null;
     flag2b = null;
     $("#1_bomb").on("pointerdown", function(){
-        if(flag1b){
-            flag1b = null;
-            $("#1_bomb").removeClass("active");
-        }else{ // 加速度2度押し解除
-            flag1b = true;
-            $("#1_bomb").addClass("active");
+        if(!flag2b){
+            if(flag1b){ // 加速度2度押し解除
+                flag1b = null;
+                $("#1_bomb").removeClass("active");
+                $("#2_bomb").removeClass("inactive");
+            }else{
+                flag1b = true;
+                $("#1_bomb").addClass("active");
+                $("#2_bomb").addClass("inactive");
+            }
+            effectCalc();
         }
-        effectCalc();
     });
     $("#2_bomb").on("pointerdown", function(){
-        if(flag2b){
-            flag2b = null;
-            $("#2_bomb").removeClass("active");
-        }else{ // 加速度2度押し解除
-            flag2b = true;
-            $("#2_bomb").addClass("active");
+        if(!flag1b){
+            if(flag2b){ // 加速度2度押し解除
+                flag2b = null;
+                $("#1_bomb").removeClass("inactive");
+                $("#2_bomb").removeClass("active");
+            }else{
+                flag2b = true;
+                $("#1_bomb").addClass("inactive");
+                $("#2_bomb").addClass("active");
+            }
+            effectCalc();
         }
-        effectCalc();
     });
     
     // 視線ボタンを押したときのフラグ s=sight

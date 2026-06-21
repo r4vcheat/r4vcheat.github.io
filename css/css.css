@@ -200,6 +200,10 @@ body{
     background-color: cornflowerblue;
 }
 
+.inactive{
+    background-color: gray;
+}
+
 .grandCrossTFButton{
     height: 35px;
 }
