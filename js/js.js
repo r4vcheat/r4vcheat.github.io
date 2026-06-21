@@ -143,24 +143,32 @@ $(function(){
     flag1s = null;
     flag2s = null;
     $("#1_sight").on("pointerdown", function(){
-        if(flag1s){
-            flag1s = null;
-            $("#1_sight").removeClass("active");
-        }else{ // 視線2度押し解除
-            flag1s = true;
-            $("#1_sight").addClass("active");
+        if(!flag2s){
+            if(flag1s){ // 視線2度押し解除
+                flag1s = null;
+                $("#1_sight").removeClass("active");
+                $("#2_sight").removeClass("inactive");
+            }else{
+                flag1s = true;
+                $("#1_sight").addClass("active");
+                $("#2_sight").addClass("inactive");
+            }
+            effectCalc();
         }
-        effectCalc();
     });
     $("#2_sight").on("pointerdown", function(){
-        if(flag2s){
-            flag2s = null;
-            $("#2_sight").removeClass("active");
-        }else{ // 視線2度押し解除
-            flag2s = true;
-            $("#2_sight").addClass("active");
+        if(!flag1s){
+            if(flag2s){ // 視線2度押し解除
+                flag2s = null;
+                $("#1_sight").removeClass("inactive");
+                $("#2_sight").removeClass("active");
+            }else{
+                flag2s = true;
+                $("#1_sight").addClass("inactive");
+                $("#2_sight").addClass("active");
+            }
+            effectCalc();
         }
-        effectCalc();
     });
 
     // つなみ・ほのおの真偽ボタンを押した時のフラグ
