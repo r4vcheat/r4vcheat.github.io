@@ -1,0 +1,224 @@
+body{
+	-webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+}
+
+headder{
+    display: block;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+
+    top: 0;
+}
+footer{
+    display: block;
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    
+}
+
+#mainContents{
+    margin-top: 40px;
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* タスクリスト*/
+#taskList{
+    background-color: blueviolet;
+    min-width: 200px;
+    width: calc(100% - 16px);
+    margin: auto;
+    padding: 8px 8px 1px 8px;
+}
+
+#taskItemOrg{
+    display: none;
+}
+.taskItem{
+    background-color: green;
+    min-width: 200px;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: calc(100% - 16px);
+    margin: 0px auto 8px auto;
+}
+.taskInfo{
+    width: 100%;
+    height: 36px;
+    display: flex;
+}
+.taskInfo label {
+    width: calc(100% - 120px);
+    margin: auto;
+    display: inherit;
+}
+.taskInfo label input{
+    width: 15px;
+    vertical-align: middle;
+}
+.taskInfo label a.taskName{
+    width: calc(100% - 15px);
+    padding-left: 10px;
+    margin: auto;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.editButton{
+    display: inline-block;
+    border: #000 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(105, 105, 105);
+    width: 60px;
+    text-align: center;
+}
+
+.deleteButton{
+    display: inline-block;
+    border: #000 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(105, 105, 105);
+    color: red;
+    width: 60px;
+    text-align: center;
+    margin-left: 8px;
+
+}
+
+/* 編集画面 */
+h1{
+    text-align: center;
+}
+
+#editSection{
+    position: absolute;
+    display: flex;
+    top: 0;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#editMenu{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    vertical-align: middle;
+    background-color: rgb(255, 255, 255);
+}
+
+#editTable{
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+input[type=text],input[type=number]{
+    border: rgb(0, 0, 0) 1px solid;
+    margin: 6px;
+}
+input.inputTimes{
+    width: 2em;
+    text-align: center;
+}
+
+td,th{
+    border: #000 1px solid;
+    padding: 0 6px;
+}
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 
+input[type="number"] { 
+    -moz-appearance:textfield; 
+} 
+
+body{
+    text-align: center;
+}
+
+#main{
+    display: inline-block;
+}
+
+.button{
+    display: inline-block;
+    border: #000 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(105, 105, 105);
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grandCross{
+    text-align: center;
+    margin-top: 5px;
+}
+.grandCrossEffect.special.disabled, .grandCrossEffect.sight.disabled{
+    color: gray ;
+    background-color: gray;
+}
+
+.grandCrossEffect{
+    background-color: blanchedalmond;
+}
+
+.grandCrossEffect.special{
+    font-weight: bold;
+}
+
+.grandCrossEffect.sight{
+    background-color: pink;
+}
+
+.grandCrossEffect.sight.bold{
+    font-weight: bold;
+}
+
+.active{
+    background-color: cornflowerblue;
+}
+
+.inactive{
+    background-color: gray;
+}
+
+.grandCrossTFButton{
+    height: 35px;
+}
+
+td{
+    width: 120px;
+    /* padding: 5px; */
+}
+
+.debuffImg{
+    width: 21px;
+    height: 21px;
+}
+
+#reloadImg{
+    width: 30px;
+    height: 30px;
+}

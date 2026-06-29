@@ -354,4 +354,90 @@ $(function(){
         }
     }
 
+    // リロードボタン押下
+    $("#reloadImg").on("pointerdown", function(){
+        flag1 = null;
+        flag2 = null; 
+        flag1wl = null;
+        flag2wl = null;
+        flag1b = null;
+        flag2b = null;
+        flag1s = null;
+        flag2s = null;
+        flagTsunami = null;
+        flagFire = null;
+            
+        $("#1-false").removeClass("active");
+        $("#1-true").removeClass("active");
+        $("#2-false").removeClass("active");
+        $("#2-true").removeClass("active");
+
+        $("#1_water").removeClass("active");
+        $("#1_water").removeClass("inactive");
+        $("#1_lightning").removeClass("active");
+        $("#1_lightning").removeClass("inactive");
+        $("#2_water").removeClass("active");
+        $("#2_water").removeClass("inactive");
+        $("#2_lightning").removeClass("active");
+        $("#2_lightning").removeClass("inactive");
+
+        $("#1_bomb").removeClass("active");
+        $("#1_bomb").removeClass("inactive");
+        $("#2_bomb").removeClass("active");
+        $("#2_bomb").removeClass("inactive");
+        
+        $("#1_sight").removeClass("active");
+        $("#1_sight").removeClass("inactive");
+        $("#2_sight").removeClass("active");
+        $("#2_sight").removeClass("inactive");
+
+        $("#tsunami-true-button").removeClass("active");
+        $("#tsunami-false-button").removeClass("active");
+
+        $("#fire-true-button").removeClass("active");
+        $("#fire-false-button").removeClass("active");
+
+        $("#1_sight_true").addClass("disabled");
+        $("#1_sight_false").addClass("disabled");
+        $("#1_water_true").addClass("disabled");
+        $("#1_water_false").addClass("disabled");
+        $("#1_lightning_true").addClass("disabled");
+        $("#1_lightning_false").addClass("disabled");
+        $("#1_water_true").addClass("disabled");
+        $("#1_water_false").addClass("disabled");
+        $("#1_lightning_true").addClass("disabled");
+        $("#1_lightning_false").addClass("disabled");
+        $("#1_water_true").addClass("disabled");
+        $("#1_water_false").addClass("disabled");
+        $("#1_lightning_true").addClass("disabled");
+        $("#1_lightning_false").addClass("disabled");
+        $("#1_bomb_true").addClass("disabled");
+        $("#1_bomb_false").addClass("disabled");
+        
+        $("#2_sight_true").addClass("disabled");
+        $("#2_sight_false").addClass("disabled");
+        $("#2_water_true").addClass("disabled");
+        $("#2_water_false").addClass("disabled");
+        $("#2_lightning_true").addClass("disabled");
+        $("#2_lightning_false").addClass("disabled");
+        $("#2_water_true").addClass("disabled");
+        $("#2_water_false").addClass("disabled");
+        $("#2_lightning_true").addClass("disabled");
+        $("#2_lightning_false").addClass("disabled");
+        $("#2_water_true").addClass("disabled");
+        $("#2_water_false").addClass("disabled");
+        $("#2_lightning_true").addClass("disabled");
+        $("#2_lightning_false").addClass("disabled");
+        $("#2_bomb_true").addClass("disabled");
+        $("#2_bomb_false").addClass("disabled");
+        
+        $("#tsunami_true").addClass("disabled");
+        $("#tsunami_false").addClass("disabled");
+
+        $("#fire_true").addClass("disabled");
+        $("#fire_false").addClass("disabled");
+
+        effectCalc();
+    });
+
 });
